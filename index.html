@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Modalon | Ultra simple and light</title>
-        <link rel="stylesheet" href="modalon.css">
+  <head>
+    <meta charset="utf-8">
+    <title>Modalon | Ultra simple and light</title>
+    <link rel="stylesheet" href="modalon.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300">
+    <style>
+    body {
+      font-family: 'Lato';
+    }
+    h4, p {
+      margin-top: 0;
+    }
+    button {
+      padding: 7px 24px;
+    }
+    </style>
+  </head>
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300">
-        <style>
-        body {
-            font-family: 'Lato';
-        }
-        h4, p {
-            margin-top: 0;
-        }
-        button {
-            padding: 7px 24px;
-        }
-        </style>
-    </head>
+  <body>
+    <button class="modal-open">AbraKadabra</button>
 
-    <body>
-        <button class="modal-open">AbraKadabra</button>
+    <!-- Modal -->
+    <div class="modal">
+      <div class="modal-header">
+        <h4>Modal Example</h4>
+      </div>
+      <div class="modal-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-close">Close</button>
+      </div>
+    </div>
+    <!-- /Modal -->
 
-        <!-- Modal -->
-        <div class="modal">
-            <div class="modal-header">
-                <h4>Modal Example</h4>
-            </div>
-            <div class="modal-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="modal-footer">
-                <button class="modal-close">Close</button>
-            </div>
-        </div>
-        <!-- /Modal -->
-
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script src="modalon.js"></script>
-    </body>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="modalon.js"></script>
+  </body>
 </html>
