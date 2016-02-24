@@ -1,0 +1,75 @@
+/*!
+ * Modalon v1.0.0 | https://github.com/drihup/modalon
+ * Licencia MIT
+ */
+body {
+  overflow: auto;
+}
+.modal-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1010;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 90%;
+  background-color: #FAFAFA;
+  border-radius: 4px;
+  margin-top: 30px;
+  z-index: 1050;
+}
+@media (min-width: 768px) {
+  .modal {
+    width: 85%;
+  }
+}
+@media (min-width: 992px) {
+  .modal {
+    width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  .modal {
+    width: 75%;
+    max-width: 1000px;
+  }
+}
+.modal .modal-header:after,
+.modal .modal-content:after,
+.modal .modal-footer:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+.modal .modal-header:before,
+.modal .modal-content:before,
+.modal .modal-footer:before {
+  display: table;
+  content: " ";
+}
+.modal .modal-header,
+.modal .modal-content,
+.modal .modal-footer {
+  padding: 15px;
+}
+.modal :last-child {
+  margin-bottom: 0;
+}
+.modal .modal-header {
+  border-bottom: 1px solid #DDD;
+  border-radius: 4px 4px 0 0;
+}
+.modal .modal-footer {
+  border-top: 1px solid #DDD;
+  border-radius: 0 0 4px 4px;
+}
