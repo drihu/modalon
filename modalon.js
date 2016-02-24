@@ -7,16 +7,16 @@ $(document).ready(function () {
     $('body').append('<div class=\"modal-bg\"><\/div>');
 
     var modal = {
-        time: 150,
+        time: 400,
         open: function () {
             document.body.style.overflow = 'hidden';
-            $('.modal-bg').fadeIn(this.time);
-            $('.modal').slideDown(this.time);
+            $('.modal-bg').fadeIn(modal.time);
+            $('.modal').slideDown(modal.time);
         },
         close: function () {
             document.body.style.overflow = 'auto';
-            $('.modal-bg').fadeOut(this.time);
-            $('.modal').slideUp(this.time);
+            $('.modal-bg').fadeOut(modal.time);
+            $('.modal').slideUp(modal.time);
         }
     };
 
