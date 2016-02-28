@@ -4,19 +4,17 @@
  */
 $(document).ready(function () {
 
-    $('body').append('<div class=\"modal-bg\"><\/div>');
-
     var modal = {
         time: 400,
         open: function () {
             document.body.style.overflow = 'hidden';
-            $('.modal-bg').fadeIn(modal.time);
-            $('.modal').slideDown(modal.time);
+            $('.modal').fadeIn(modal.time);
+            $('.modal-content').slideDown(modal.time);
         },
         close: function () {
             document.body.style.overflow = 'auto';
-            $('.modal-bg').fadeOut(modal.time);
-            $('.modal').slideUp(modal.time);
+            $('.modal').fadeOut(modal.time);
+            $('.modal-content').slideUp(modal.time);
         }
     };
 
@@ -24,6 +22,10 @@ $(document).ready(function () {
 
     $('.modal-close').on('click', modal.close);
 
-    $('.modal-bg').on('click', modal.close);
+    $('.modal').on('click', function (e) {
+        if (e.target.className === 'modal') {
+            modal.close();
+        }
+    });
 
 });
