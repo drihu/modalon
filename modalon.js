@@ -1,29 +1,35 @@
 /*!
- * Modalon v1.0.0 | https://github.com/drihup/modalon
- * Licencia MIT
+ * Modalon v1.0.0
+ * https://github.com/drihup/modalon
+ * MIT License
  */
-$(document).ready(function () {
+'use strict';
+$(function () {
 
     var modal = {
-        time: 400,
+        time: 300,
+        content: $('.modal'),
+        wrapper: $('.modal-wrapper'),
+        btnOpen: $('.modal-btn-open'),
+        btnClose: $('.modal-btn-close'),
         open: function () {
             document.body.style.overflow = 'hidden';
-            $('.modal').fadeIn(modal.time);
-            $('.modal-content').slideDown(modal.time);
+            modal.wrapper.fadeIn(modal.time);
+            modal.content.slideDown(modal.time);
         },
         close: function () {
             document.body.style.overflow = 'auto';
-            $('.modal').fadeOut(modal.time);
-            $('.modal-content').slideUp(modal.time);
+            modal.wrapper.fadeOut(modal.time);
+            modal.content.slideUp(modal.time);
         }
     };
 
-    $('.modal-open').on('click', modal.open);
+    modal.btnOpen.on('click', modal.open);
 
-    $('.modal-close').on('click', modal.close);
+    modal.btnClose.on('click', modal.close);
 
-    $('.modal').on('click', function (e) {
-        if (e.target.className === 'modal') {
+    modal.wrapper.on('click', function (e) {
+        if (e.target.className === modal.wrapper.attr('class')) {
             modal.close();
         }
     });

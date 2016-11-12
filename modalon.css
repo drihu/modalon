@@ -1,11 +1,12 @@
 /*!
- * Modalon v1.0.0 | https://github.com/drihup/modalon
- * Licencia MIT
+ * Modalon v1.0.0
+ * https://github.com/drihup/modalon
+ * MIT License
  */
 body {
   overflow: auto;
 }
-.modal {
+.modal-wrapper {
   display: none;
   position: fixed;
   top: 0;
@@ -17,40 +18,35 @@ body {
   overflow: auto;
   z-index: 1010;
 }
-.modal-content {
+.modal {
   display: none;
   width: 90%;
   background-color: #FFF;
   margin: auto;
   border-radius: 4px;
-  z-index: 1050;
+  z-index: 1020;
 }
 @media (min-width: 768px) {
-  .modal-content {
+  .modal {
     width: 85%;
   }
 }
 @media (min-width: 992px) {
-  .modal-content {
+  .modal {
     width: 80%;
   }
 }
 @media (min-width: 1200px) {
-  .modal-content {
+  .modal {
     width: 75%;
     max-width: 1000px;
   }
 }
 .modal .modal-header:after,
 .modal .modal-body:after {
-  display: table;
+  display: block;
   content: " ";
   clear: both;
-}
-.modal .modal-header:before,
-.modal .modal-body:before {
-  display: table;
-  content: " ";
 }
 .modal .modal-header,
 .modal .modal-body {
@@ -73,20 +69,20 @@ body {
 .modal .modal-body:first-child {
   border-radius: 4px;
 }
-.modal-content.fixed {
-  height: 100%;
+.modal.fixed {
+  max-height: 100%;
   overflow: auto;
 }
-.modal-content::-webkit-scrollbar {
+.modal::-webkit-scrollbar {
   width: 12px;
   border-radius: 0 4px 4px 0;
 }
-.modal-content::-webkit-scrollbar-track {
-  background-color: #EEE;
+.modal::-webkit-scrollbar-track {
+  background-color: #F8F8F8;
   border-radius: 0 4px 4px 0;
 }
-.modal-content::-webkit-scrollbar-thumb {
+.modal::-webkit-scrollbar-thumb {
   background-color: #CCC;
-  border: 1px solid #EEE;
-  border-radius: 0 4px 4px 0;
+  border: 2px solid #F8F8F8;
+  border-radius: 4px;
 }
